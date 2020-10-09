@@ -9,7 +9,7 @@
   <script>
     var father={
       car:"infiniti",
-      money:1000000000000000000000
+      money:100000000000
     }
     var hmm=Object.create(father,{
       bag:{
@@ -19,9 +19,10 @@
         configurable:false
       }
     })
+    hmm.mother="marry";
     console.log(hmm);
-    console.log(hmm.car)
-    console.log(hmm.money)
+    console.log(hmm.car);
+    console.log(hmm.money);
   </script>
 </body>
 </html>

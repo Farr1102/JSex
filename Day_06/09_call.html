@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     function jisuan(base,bonus1,bonus2){
+       console.log(`${this.name}的工资为${base+bonus1+bonus2}`);
+     }
+     var lilei={
+       name:"Li Lei"
+       }
+    var hmm={
+      name:"Han Meimei"
+    }
+    jisuan.call(lilei,10000,1000,1000);
+    jisuan.call(hmm,5000,500,500)
+  </script>
+</body>
+</html>
