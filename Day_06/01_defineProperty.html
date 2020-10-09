@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict";
+    var eric={
+      eid:1001,
+      ename:"艾瑞克",
+      salary:100000
+    }
+    var obj=Object.getOwnPropertyDescriptor(
+      eric,"eid"
+    );
+    console.log(obj);
+    //id只读
+    Object.defineProperty(eric,"eid",{
+      writable:false,
+      configurable:false
+    });
+    //姓名不了删除
+    Object.defineProperty(eric,"ename",{
+      configurable:false
+    });
+    //薪资不可遍历
+    Object.defineProperty(eric,"salary",{
+      enumerable:false,
+      configurable:false
+    })
+    // Object.defineProperty(eric,"eid",{
+    //   writable:false
+    // });
+    // eric.eid=12;
+    for(var k in eric){
+      console.log(`${k}:${eric[k]}`);
+    }
+    // delete eric.ename;
+    console.log(eric);
+    console.log(eric.salary)
+  </script>
+</body>
+</html>

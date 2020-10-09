@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Student(sname,sage){
+      this.sname=sname;
+      this.sage=sage;
+    }
+    Student.prototype.intr=function(){
+      console.log(
+        `My name is ${this.sname},i'm ${this.sage}`
+      );
+    }
+    var lilei=new Student("Li Lei",11);
+    var hmm=new Student("Han Meimei",12);
+    lilei.intr();
+    hmm.intr();
+    console.log(
+      lilei.__proto__==hmm.__proto__
+    );
+    console.log(lilei.__proto__==Student.prototype);
+    console.log(hmm.__proto__==Student.prototype);
+
+    var str="hello";
+    var arr=str.split("");
+    console.log(arr);
+
+    arr.reverse();
+    console.log(arr);
+    
+  </script>
+</body>
+</html>

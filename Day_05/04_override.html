@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Student(sname,sage){
+      this.sname=sname;
+      this.sage=sage;
+    }
+    Student.prototype.intr=function (){
+      console.log(`我是${this.sname},我今年${this.sage}岁了。`)
+    }
+    Student.prototype.toString=function(){
+      return `sname:${this.sname},sage:${this.sage}`
+    }
+    var lilei=new Student("Li Lei",11);
+    var arr=[1,2,3];
+    var date=new Date();
+    console.log(arr);
+    console.log(lilei);
+    console.log(arr.toString());
+    console.log(date.toString());
+    console.log(lilei.toString());
+  </script>
+</body>
+</html>

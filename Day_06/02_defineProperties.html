@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict";
+    var eric={
+      eid:1001,
+      ename:"艾瑞克",
+      salary:100000
+    }
+    Object.defineProperties(eric,{
+      eid:{
+        writable:false,
+        configurable:false
+      },
+      ename:{
+        configurable:false
+      },
+      salary:{
+        enumerable:false,
+        configurable:false
+      }
+    })
+    console.log(eric);
+    for(var k in eric){
+      console.log(`${k}:${eric[k]}`)
+    }
+  </script>
+</body>
+</html>

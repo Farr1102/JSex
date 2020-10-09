@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var father={
+      car:"infiniti",
+      money:1000000000000000000000
+    }
+    var hmm=Object.create(father,{
+      bag:{
+        value:"chanel",
+        writable:true,
+        enumerable:true,
+        configurable:false
+      }
+    })
+    console.log(hmm);
+    console.log(hmm.car)
+    console.log(hmm.money)
+  </script>
+</body>
+</html>

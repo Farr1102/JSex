@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr=["停车","水暖"];
+    var str=arr.join("|");
+    var input=prompt("请输入");
+    var i=input.search(new RegExp(str));
+    if(i!=-1){
+      alert("发现敏感词,禁止发送");
+    }else{
+      alert(`然哥说:"${input}"`);
+    }
+  </script>
+</body>
+</html>

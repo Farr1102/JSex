@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var eric={
+      eid:1001,
+      ename:"埃里克",
+      eage:21
+    }
+    Object.defineProperties(eric,{
+      _eage:{
+        value:eric.eage,
+        writable:true,
+        enumerable:false,
+        configurable:false
+      },
+      eage:{
+        get:function(){
+          return this._eage;
+        },
+        set:function(value){
+          if(value>=18&&value<=65){
+            this._eage=value;
+          }
+        }
+      },
+
+    });
+    eric.eage=18;
+    console.log(eric);
+  </script>
+</body>
+</html>

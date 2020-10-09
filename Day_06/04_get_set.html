@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var eric={
+      eid:1004,
+      ename:"埃里克",
+      eage:22
+    }
+    Object.defineProperties(eric,{
+      _eage:{
+        value:eric.eage,
+        writable:true,
+        enumerable:false,
+        configurable:false
+      },
+      eage:{
+        get:function(){
+          console.log(`自动调用get()`);
+          return this._eage;
+        },
+        set:function(value){
+          if(value>=18&&value<=65){
+            this._eage=value;
+          }else{
+            console.log(`输入的年龄不合法`);
+          }
+        }
+      }
+    });
+    console.log(eric.eage);
+    console.log(eric);
+  </script>
+</body>
+</html>

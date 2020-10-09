@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict";
+    var eric={
+      eid:1001,
+      ename:"eric"
+    }
+    Object.defineProperty(eric,"eid",{writable:false});
+    eric.eid=10;
+    console.log(eric);
+  </script>
+</body>
+</html>
