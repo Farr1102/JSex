@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var add=(a,b)=>a+b;
+    console.log(add(3,5));//8
+
+    var arr=[23,12,123,3,2,1];
+    arr.sort((a,b)=>a-b);
+    console.log(arr);//1,2,3,12,23,123
+
+    var str="you can you up";
+    str=str.replace(/\b[a-z]/ig,kw=>kw.toUpperCase());
+    console.log(str);//You Can You Up
+
+    var arr=["亮亮","然然","东东"];
+    arr.forEach(elem=>console.log(`${elem} 到！`))
+  
+    var arr=[1,2,3,4,5];
+    var arr2=arr.map(elem=>elem*2);
+    console.log(arr2);//2,4,6,8,10
+    console.log(arr);//1,2,3,4,5
+
+    var arr=[1,2,3,4,5];
+    var arr2=arr.filter((elem)=>elem%2==0);
+    console.log(arr2);//2,4
+    console.log(arr);//1,2,3,4,5
+
+    var arr=[1,2,3,4,5];
+    var result=arr.reduce((box,elem)=>box+elem,0)
+    console.log(result);//15
+
+    var n=5;
+    var timer=setInterval(()=>{
+      n--;
+      if(n==0){
+        console.log("boom!!!");
+        clearInterval(timer);
+      }else{
+        console.log(n);
+      }
+    },1000);
+
+    (()=>{
+      var end=new Date();
+      console.log(`页面加载完成,at:${end.toLocaleString()}`)
+    })();
+
+  </script>
+</body>
+</html>

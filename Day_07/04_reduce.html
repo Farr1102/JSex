@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr=[1,2,3,4,5];
+    var arr1=[2,6,8,10];
+    var sum=arr.reduce(function(box,elem,i,arr){
+      return box+elem
+    });
+    var sum1=arr1.reduce(function(box,elem){
+      return box+elem
+    },sum);
+    console.log(sum1)
+  </script>
+</body>
+</html>
