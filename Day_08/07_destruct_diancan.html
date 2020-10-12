@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var order=({zhushi="香辣鸡腿堡",xiaochi="薯条",yinliao="可乐"})=>console.log(`
+      您点的套餐为:
+        主食:${zhushi},
+        小吃:${xiaochi},
+        饮料:${yinliao}.
+      =====================
+      祝您用餐愉快!(*￣︶￣)
+    `);
+    order({});
+    order({xiaochi:"鸡翅"});
+    order({yinliao:"橙汁",xiaochi:"鸡柳"});
+    var num1=0.1+0.5;
+    var a=num1.toFixed(1);
+    var num2=0.1+0.2;
+    var b=num2.toFixed(1);
+    console.log(b)
+    console.log(a==0.6);
+    console.log(b==0.3);
+
+
+  </script>
+</body>
+</html>

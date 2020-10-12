@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    Function.prototype.bind=function(name,...arr1){
+      var that=this;
+      return (...arr2)=>that.call(name,...arr1,...arr2);
+    }
+    var jisuan=(base,bonus1,bonus2)=>console.log(base+bonus1+bonus2);
+    jisuan(1000,2000,3000);
+    var lilei={
+      name:"Li Lei"
+    }
+    var jisuan2=jisuan.bind(lilei,10000)
+    jisuan2(2000,3000)
+    jisuan2(5000,1000)
+  </script>
+</body>
+</html>

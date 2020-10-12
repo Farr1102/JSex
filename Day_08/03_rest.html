@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var add1=(name,...arr)=>arr.reduce((prev,elem)=>prev+elem,0);
+    console.log(add1("haha",2,3,4));
+
+
+
+    var add=(name,...arr)=>{
+      var total=0;
+      for(var k of arr){
+        total+=k;
+      }
+      return total;
+    }
+    console.log(add("xixi",2,3));
+  </script>
+</body>
+</html>

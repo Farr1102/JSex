@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Student{
+      constructor(sname,sage){
+        this.sname=sname;
+        this.sage=sage;
+      }
+      intr(){
+        console.log(`I'm ${this.sname},I'm ${this.sage}`)
+      }
+    }
+    var lilei=new Student("Li Lei","15");
+    // var {sname,sage}=lilei;
+    // console.log(sname);
+    lilei.intr();
+    setTimeout(lilei.intr,3000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     function order(zhushi="hamburger",xiaochi="chips",yinliao="cola"){
+      console.log(`
+      您点的套餐为:
+        主食:${zhushi};
+        小吃:${xiaochi};
+        饮料:${yinliao};
+        ==============
+        请慢用!
+      `)
+    }
+    order();
+    //想换饮料
+    order("coffe")
+    // function order({zhushi="hamburger",xiaochi="chips",yinliao="cola"}){
+    //   console.log(`
+    //   您点的套餐为:
+    //     主食:${zhushi};
+    //     小吃:${xiaochi};
+    //     饮料:${yinliao};
+    //     ==============
+    //     请慢用!
+    //   `)
+    // }
+    // order({zhushi:"aa"});
+    // order({xiaochi:"chicken"})
+    // order({yinliao:"orange",xiaochi:"cc"})
+  </script>
+</body>
+</html>

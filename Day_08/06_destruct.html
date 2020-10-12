@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+    var arr=[2010,10,12];
+    var [y,m,d]=arr;
+    console.log(`今天是${y}年`);
+    console.log(`今天是${m}月`);
+    console.log(`今天是${d}日`);
+
+    var arr1=[{
+      name:"ooo"
+    }]
+    var [o]=arr1;
+    console.log(o.name);
+
+    var obj={
+      sname:"aaa",
+      like:["history","basketball"]
+    }
+    var {like}=obj;
+    var [,b]=like;
+    console.log(b);
+    console.log(obj);
+    var obj1={...obj};
+    console.log(obj1);
+    var {sname}=obj
+   console.log(`${sname.repeat(5)}`)
+
+
+    var lilei={
+      sname:"Li Lei",
+      sage:15
+    }
+
+
+
+
+
+
+
+
+
+
+
+    // function Foo(){
+    //   Foo.a=function (){
+    //     console.log(1);
+    //   }
+    //   this.a=function (){
+    //     console.log(2);
+    //   }
+    // }
+    // Foo.prototype.b=function(){
+    //   console.log(3);
+    // }
+    // Foo.a=function (){
+    //   console.log(4)
+    // }
+    // Foo.a();
+    // console.log(Foo.a);
+    // var obj=new Foo();
+  </script>
+</body>
+</html>
