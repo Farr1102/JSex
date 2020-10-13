@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var liang = xiaoche => {
+      console.log(`liang起跑`);
+      setTimeout(function () {
+        console.log(`liang到达终点`);
+        xiaoche();
+      }, 6000)
+    }
+    var ran = xiaoche => {
+      console.log(`ran起跑`);
+      setTimeout(function () {
+        console.log(`ran到达终点`);
+        xiaoche();
+      }, 4000)
+    }
+    var dong = xiaoche => {
+      console.log(`dong起跑`);
+      setTimeout(function () {
+        console.log(`dong到达终点`);
+        xiaoche();
+      }, 2000)
+    }
+    liang(
+      () => dong(
+        () => ran(() => console.log(`结束`))
+      )
+    );
+  </script>
+</body>
+
+</html>

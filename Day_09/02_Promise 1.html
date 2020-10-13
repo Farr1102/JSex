@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var liang = xiaoche => {
+      return new Promise(
+        function(door){
+          console.log(`liang起跑`);
+          setTimeout(function () {
+          console.log(`liang到达终点`);
+          door(bang);
+      }, 6000)
+        }
+      )
+    }
+    var ran = () => {
+      return new Promise(
+        function(door){
+          console.log(`ran起跑`);
+          setTimeout(function () {
+          console.log(`ran到达终点`);
+          door();
+      }, 6000)
+        }
+      )
+    }
+    var dong = () => {
+      return new Promise(
+        function(door){
+          console.log(`dong起跑`);
+          setTimeout(function () {
+          console.log(`dong到达终点`);
+          door();
+      }, 6000)
+        }
+      )
+    }
+    liang().then(ran).then(dong).then(()=>console.log(`比赛结束`));
+  </script>
+</body>
+
+</html>

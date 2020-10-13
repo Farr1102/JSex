@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var liang =() => {
+      return new Promise(
+        function(door){
+          var bang="亮的接力棒"
+          console.log(`liang起跑`);
+          setTimeout(function () {
+          console.log(`liang拿着${bang}到达终点`);
+          door(bang);
+      }, 6000)
+        }
+      )
+    }
+    var ran = (bang)=>{
+      return new Promise(
+        function(door){
+          console.log(`ran起跑`);
+          setTimeout(function () {
+          console.log(`ran${bang}到达终点`);
+          door(bang);
+      }, 6000)
+        }
+      )
+    }
+    var dong = (bang) => {
+      return new Promise(
+        function(door){
+          console.log(`dong起跑`);
+          setTimeout(function () {
+          console.log(`dong${bang}到达终点`);
+          door();
+      }, 6000)
+        }
+      )
+    }
+    liang().then(ran).then(dong).then(()=>console.log(`比赛结束`));
+  </script>
+</body>
+
+</html>
